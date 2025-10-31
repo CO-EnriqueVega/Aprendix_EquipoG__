@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprendix</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <!-- Encabezado global -->
+  <header>
+    <h1>Aprendix</h1>
+    <p class="slogan">"Aprendix: donde el conocimiento crece"</p>
+  </header>
+
+  <!-- Pantalla Login -->
+  <section id="login" class="screen active">
+    <div class="card">
+      <h2>Inicie sesión en su cuenta</h2>
+      <p class="sub">Bienvenido</p>
+      <input type="text" id="loginUser" placeholder="Usuario" />
+      <input type="password" id="loginPass" placeholder="Contraseña" />
+      <button onclick="goTo('home')">Iniciar sesión</button>
+      <p class="link">
+        ¿No tiene una cuenta? 
+        <a href="#" onclick="goTo('register')">Registrarse ahora</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pantalla Registro -->
+  <section id="register" class="screen">
+    <div class="card">
+      <h2>Registremos su cuenta</h2>
+      <p class="sub">¡Hola!</p>
+      <input type="text" id="regName" placeholder="Nombre del usuario" />
+      <input type="email" id="regEmail" placeholder="Correo" />
+      <input type="password" id="regPass" placeholder="Contraseña" />
+      <button onclick="goTo('home')">Registrar</button>
+      <p class="link">
+        ¿Ya tienes una cuenta? 
+        <a href="#" onclick="goTo('login')">Iniciar ahora</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Pantalla Principal -->
+  <section id="home" class="screen">
+    <div class="card">
+      <h2>¡Bienvenido a Gestión de Proyectos!</h2>
+      <p>
+        Aprende y mejora tus habilidades en administración de proyectos
+        de manera divertida e interactiva.
+      </p>
+      <div class="menu">
+        <button onclick="goTo('descripcion')">Inicio</button>
+        <button>Jugar</button>
+        <button>Aprender</button>
+        <button>Progreso</button>
+        <button>Ayuda</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pantalla Descripción -->
+  <section id="descripcion" class="screen">
+    <div class="card">
+      <button class="back" onclick="goTo('home')">← Regresar</button>
+      <h2>DESCRIPCIÓN</h2>
+      <p>
+        Nuestra aplicación offline para administración de proyectos está
+        diseñada para proporcionar a los usuarios acceso a información sobre
+        las principales metodologías de administración de proyectos sin
+        necesidad de conexión a internet.
+      </p>
+      <p>
+        La aplicación ofrece contenido de alta calidad y actualizado sobre temas
+        como Agile, Scrum, Kanban y más.
+      </p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
