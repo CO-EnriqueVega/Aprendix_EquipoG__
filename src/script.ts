@@ -1,5 +1,6 @@
 function goTo(screenId: string): void {
   console.log('goTo called with', screenId);
+
   const screens: NodeListOf<HTMLElement> = document.querySelectorAll(".screen");
   screens.forEach((s: HTMLElement) => s.classList.remove("active"));
 
@@ -12,4 +13,5 @@ function goTo(screenId: string): void {
   }
 }
 
-(window as any).goTo = goTo;
+// Asignamos la función al objeto global window con tipado correcto
+window.goTo = goTo;
