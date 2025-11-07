@@ -29,5 +29,14 @@ export default [
         version: "detect"
       }
     }
+  },
+  {
+    // Aquí defines qué carpetas ignorar
+    ignores: [
+      "node_modules",
+      "dist",
+      "build",
+      "coverage",
+    ],
   }
 ];
